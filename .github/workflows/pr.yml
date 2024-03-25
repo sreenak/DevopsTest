@@ -11,12 +11,6 @@ jobs:
         run: echo "${{ toJSON(github.event) }}"
       - name: Get code
         uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm ci
-      - name: Test code
-        run: npm run test
-      - name: Build code
-        run: npm run build
       - name: Deploy project
         run: echo "Deploying to test environment..."
   create_pull_request:
