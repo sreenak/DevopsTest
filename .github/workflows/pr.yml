@@ -27,5 +27,5 @@ jobs:
         commit-message: Automated Pull Request
         title: Automatically creating pull request to staging
         body: This pull request was automatically created when code was pushed to the develop branch.
-        branch: develop
-        base: staging
+        branch: staging
+        base: develop
