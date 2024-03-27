@@ -1,0 +1,23 @@
+name: Auto Pull Request
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  create_pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: develop  # Specify the branch you want to create the pull request from
+          title: Automated Pull Request
+          body: |
+            This is an automated pull request created by GitHub Actions.
+            Please review and merge as appropriate.
