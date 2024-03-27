@@ -38,7 +38,7 @@ jobs:
         # head branch
         from-branch: develop
         # base branch
-        to-branch: staging
+        to-branch: test
         # 
         repository-owner: sreenak
         # 
