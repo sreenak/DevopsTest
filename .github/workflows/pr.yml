@@ -1,4 +1,4 @@
-name: Auto PR Test
+name: Events Demo 1
 on:
   push:
     branches:
@@ -36,11 +36,12 @@ jobs:
         # Github token, https://docs.github.com/en/actions/reference/authentication-in-a-workflow
         github-token: ${{ secrets.GITHUB_TOKEN }}
         # head branch
-        from-branch: test
+        from-branch: develop
         # base branch
-        to-branch: develop
+        to-branch: master
         # 
         repository-owner: sreenak
         # 
         repository: DevopsTest
           
+      
