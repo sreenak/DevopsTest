@@ -17,6 +17,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: develop  # Specify the branch you want to create the pull request from
+          base: test  # Specify the base branch where you want to create the pull request
           title: Automated Pull Request
           body: |
             This is an automated pull request created by GitHub Actions.
