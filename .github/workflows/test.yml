@@ -5,23 +5,18 @@ on:
     branches:
       - develop
 
-
 jobs:
   create_pull_request:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3  
-    - name: Create Auto PR
-      uses: rematocorp/open-pull-request-action@v1
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Create Auto PR
+        uses: rematocorp/open-pull-request-action@v1
         with:
-          # Github token, https://docs.github.com/en/actions/reference/authentication-in-a-workflow
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          # head branch
           from-branch: develop
-          # base branch
           to-branch: master
-          # 
           repository-owner: sreenak
-          # 
-          repository: DevopsTest.
+          repository: DevopsTest
