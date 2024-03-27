@@ -36,9 +36,9 @@ jobs:
         # Github token, https://docs.github.com/en/actions/reference/authentication-in-a-workflow
         github-token: ${{ secrets.GITHUB_TOKEN }}
         # head branch
-        from-branch: develop
+        from-branch: test
         # base branch
-        to-branch: staging
+        to-branch: develop
         # 
         repository-owner: sreenak
         # 
