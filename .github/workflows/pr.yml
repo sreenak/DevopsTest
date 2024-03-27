@@ -25,22 +25,22 @@ jobs:
         run: echo "Deploying to test environment..."
 
   create_pull_request:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3  
-    - name: Create Auto PR
-      uses: rematocorp/open-pull-request-action@v1
-      with:
-        # Github token, https://docs.github.com/en/actions/reference/authentication-in-a-workflow
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        # head branch
-        from-branch: test
-        # base branch
-        to-branch: develop
-        # 
-        repository-owner: sreenak
-        # 
-        repository: DevopsTest
-          
+      needs: test
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  
+      - name: Create Auto PR
+        uses: rematocorp/open-pull-request-action@v1
+        with:
+          # Github token, https://docs.github.com/en/actions/reference/authentication-in-a-workflow
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # head branch
+          from-branch: test
+          # base branch
+          to-branch: develop
+          # 
+          repository-owner: sreenak
+          # 
+          repository: DevopsTest
+            
