@@ -1,4 +1,4 @@
-name: Events Demo 1
+name: Auto PR Test
 on:
   push:
     branches:
